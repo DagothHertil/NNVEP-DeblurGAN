@@ -41,6 +41,7 @@ class TestModel(BaseModel):
         return self.image_paths
 
     def get_current_visuals(self):
-        real_A = util.tensor2im(self.real_A.data)
+        #real_A = util.tensor2im(self.real_A.data)
         fake_B = util.tensor2im(self.fake_B.data)
-        return OrderedDict([('real_A', real_A), ('fake_B', fake_B)])
+        #return OrderedDict([('real_A', real_A), ('fake_B', fake_B)])
+        return OrderedDict([('fake_B', fake_B)])
